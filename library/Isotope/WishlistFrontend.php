@@ -39,11 +39,11 @@ class WishlistFrontend extends Frontend
         if (static::getWishlist()->addProduct($objProduct, $intQuantity, $arrConfig) !== false) {
             $_SESSION['ISO_CONFIRM'][] = $GLOBALS['TL_LANG']['MSC']['addedToWishlist'];
 
-            if (!$objModule->iso_addProductWislistJumpTo) {
+            if (!$objModule->iso_addProductWishlistJumpTo) {
                 $this->reload();
             }
 
-            \Controller::redirect(\Haste\Util\Url::addQueryString('continue=' . base64_encode(\Environment::get('request')), $objModule->iso_addProductWislistJumpTo));
+            \Controller::redirect(\Haste\Util\Url::addQueryString('continue=' . base64_encode(\Environment::get('request')), $objModule->iso_addProductWishlistJumpTo));
         }
     }
 
