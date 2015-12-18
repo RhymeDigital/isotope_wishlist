@@ -18,16 +18,16 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['iso_wishlist'] = $GLOBALS['TL_DCA']
 
 foreach ($GLOBALS['TL_DCA']['tl_module']['palettes'] as $key=>$val)
 {
-	$GLOBALS['TL_DCA']['tl_module']['palettes'][$key] = str_replace('iso_addProductJumpTo', 'iso_addProductJumpTo,iso_addProductWislistJumpTo', $GLOBALS['TL_DCA']['tl_module']['palettes'][$key]);
+	$GLOBALS['TL_DCA']['tl_module']['palettes'][$key] = str_replace('iso_addProductJumpTo', 'iso_addProductJumpTo,iso_addProductWishlistJumpTo', $GLOBALS['TL_DCA']['tl_module']['palettes'][$key]);
 }
 
 
 /**
  * Fields
  */
-$GLOBALS['TL_DCA']['tl_module']['fields']['iso_addProductWislistJumpTo'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['iso_addProductWishlistJumpTo'] = array
 (
-    'label'                     => &$GLOBALS['TL_LANG']['tl_module']['iso_addProductWislistJumpTo'],
+    'label'                     => &$GLOBALS['TL_LANG']['tl_module']['iso_addProductWishlistJumpTo'],
     'exclude'                   => true,
     'inputType'                 => 'pageTree',
     'foreignKey'                => 'tl_page.title',
