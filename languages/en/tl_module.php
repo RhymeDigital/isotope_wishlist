@@ -14,4 +14,4 @@
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_module']['iso_addProductWislistJumpTo'] = array('Add product to wish list jump to page', 'This setting defines to which page a user will be redirected when adding a product to the wish list, if other than the current page.');
+$GLOBALS['TL_LANG']['tl_module']['iso_addProductWishlistJumpTo'] = array('Add product to wish list jump to page', 'This setting defines to which page a user will be redirected when adding a product to the wish list, if other than the current page.');
