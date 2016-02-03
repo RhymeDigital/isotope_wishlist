@@ -62,20 +62,4 @@ class WishlistFrontend extends Frontend
 
         return static::$objWishlist;
     }
-
-
-    /**
-     * Callback for move_wishlist_to_cart button
-     * @param object
-     * @param array
-     */
-    public static function moveWishlistToCart()
-    {
-    	// Todo: check this and try to break it!
-    	Isotope::getCart()->copyItemsFrom(static::getWishlist());
-    	static::getWishlist()->purge();
-        $_SESSION['ISO_CONFIRM'][] = $GLOBALS['TL_LANG']['MSC']['wishlistMovedToCart'];
-        
-        return true;
-    }
 }

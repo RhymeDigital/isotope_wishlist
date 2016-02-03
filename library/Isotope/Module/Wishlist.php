@@ -167,31 +167,7 @@ class Wishlist extends Cart
     protected function generateButtons()
     {
         $arrButtons = parent::generateButtons();
-        
-        // Update label
         $arrButtons['update']['label'] = $GLOBALS['TL_LANG']['MSC']['updateWishlistBT'];
-        
-        // Add move wish list to cart button
-        if ($this->iso_cart_jumpTo > 0) {
-            $objJumpToCart = \PageModel::findByPk($this->iso_cart_jumpTo);
-
-            if (null !== $objJumpToCart) {
-                $arrButtons['moveWishlistToCart'] = array(
-                    'type'      => 'submit',
-                    'name'      => 'button_moveWishlistToCart',
-                    'label'     => $GLOBALS['TL_LANG']['MSC']['buttonLabel']['move_wishlist_to_cart'],
-                    'href'      => \Controller::generateFrontendUrl($objJumpToCart->row()),
-                );
-
-                if (\Input::post('FORM_SUBMIT') == $this->strFormId && \Input::post('button_moveWishlistToCart') != '') {
-                	if (WishlistFrontend::moveWishlistToCart())
-                	{
-	                    $this->jumpToOrReload($this->iso_cart_jumpTo);
-                	}
-                }
-            }
-        }
-        
         return $arrButtons;
     }
 }
