@@ -15,6 +15,7 @@
  * Buttons
  */
 $GLOBALS['TL_LANG']['MSC']['buttonLabel']['add_to_wishlist']        = 'Add To Wish List';
+$GLOBALS['TL_LANG']['MSC']['buttonLabel']['move_wishlist_to_cart']  = 'Move Wish List To Cart';
 
 /**
  * Miscellaneous
@@ -23,3 +24,4 @@ $GLOBALS['TL_LANG']['MSC']['updateWishlistBT']						= 'Update Wish List';
 $GLOBALS['TL_LANG']['MSC']['noItemsInWishlist']						= 'There are no items in your wish list.';
 $GLOBALS['TL_LANG']['MSC']['addedToWishlist']						= 'The selected product has been added to your wish list.';
 $GLOBALS['TL_LANG']['MSC']['wishlistMerged']						= 'The products from your last visit\'s wish list have been readded. Please review your wish list items.';
+$GLOBALS['TL_LANG']['MSC']['wishlistMovedToCart']					= 'Your wish list has been moved to your cart.';
